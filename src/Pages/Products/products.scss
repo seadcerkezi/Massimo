@@ -1,0 +1,152 @@
+.main-pizza {
+  display: flex;
+  flex-wrap: wrap;
+
+  .pizza-items {
+    width: 33.2%;
+    // height: 50vh;
+    border: 1px solid #cd2f2f;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-decoration: none;
+    position: relative;
+
+    a {
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 55%;
+        transition: 0.3s all ease;
+        &:hover {
+          transform: rotate(50deg);
+        }
+      }
+    }
+
+    .fav-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background: transparent;
+      color: red;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .item-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      color: #cd2f2f;
+      font-weight: 600;
+      font-size: 18px;
+      button {
+        display: none;
+        border-radius: 3px;
+        background-color: #cd2f2f;
+        color: white;
+        border: none;
+        font-size: 10px;
+        padding: 0 5px;
+        height: 30px;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: #fff7f7;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-pizza {
+    display: flex;
+    flex-wrap: wrap;
+    .pizza-items {
+      width: 33%;
+      // height: 40vh;
+
+      a {
+        img {
+          max-width: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .main-pizza {
+    display: flex;
+    flex-wrap: wrap;
+    .pizza-items {
+      width: 33%;
+      // height: 35vh;
+
+      a {
+        img {
+          max-width: 47%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .main-pizza {
+    .pizza-items {
+      width: 33%;
+      // height: 33vh;
+      a {
+        img {
+          max-width: 55%;
+        }
+      }
+      .item-text {
+        padding: 0 5px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .main-pizza {
+    .pizza-items {
+      width: 49.5%;
+      // height: 33vh;
+      a {
+        img {
+          max-width: 50%;
+        }
+      }
+      .item-text {
+        padding: 0 5px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .main-pizza {
+    .pizza-items {
+      width: 49.5%;
+      // height: 25vh;
+      a {
+        img {
+          max-width: 60%;
+        }
+      }
+      .item-text {
+        padding: 5px 5px;
+      }
+    }
+  }
+}

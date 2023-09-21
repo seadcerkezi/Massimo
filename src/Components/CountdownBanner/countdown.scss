@@ -1,0 +1,129 @@
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+  padding: 0 5%;
+  color: white;
+
+  .countdown-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 40%;
+
+    h4 {
+      font-weight: 700;
+      font-size: 40px;
+      margin: 0;
+      width: 70%;
+    }
+
+    h5 {
+      font-weight: 700;
+      font-size: 40px;
+      color: rgb(202, 202, 75);
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .count {
+      .ant-statistic-content-value {
+        color: rgb(202, 202, 75);
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      background-color: #cd2f2f;
+
+      &:hover {
+        cursor: pointer;
+      }
+      .countdown-navlink {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 950px) {
+  .countdown-container {
+    height: auto;
+    padding: 5% 1% 5% 5%;
+
+    .countdown-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 50%;
+
+      h4 {
+        font-size: 30px;
+        width: 85%;
+      }
+
+      h5 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      button {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .countdown-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+    padding: 4% 2%;
+
+    .countdown-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+
+      h4 {
+        font-size: 25px;
+        width: auto;
+      }
+
+      h5 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 14px;
+        padding: 0 15px;
+      }
+
+      button {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
