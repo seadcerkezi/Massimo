@@ -13,7 +13,7 @@ const Pizzas = () => {
   const { category } = useParams();
   const favourites = useSelector((state) => state.card.favItems);
   const dispatch = useDispatch();
-  console.log("Favss", { favourites });
+
   const newCategory =
     category === "pizzas" ? pizzas : category === "burgers" ? burgers : pastas;
 
@@ -38,8 +38,6 @@ const Pizzas = () => {
       return dispatch(addToFav(item));
     }
   };
-
-  console.log({ randomID: generateRandomId() });
 
   return (
     <>
