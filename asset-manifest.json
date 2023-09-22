@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/massimo/static/css/main.c0ee4d25.css",
-    "main.js": "/massimo/static/js/main.881c40e3.js",
+    "main.js": "/massimo/static/js/main.5570b631.js",
     "static/media/offerProduct.png": "/massimo/static/media/offerProduct.11eccfcb1a45834ac9d7.png",
     "static/media/offerBg.png": "/massimo/static/media/offerBg.147c28c6b0d121d6cb08.png",
     "index.html": "/massimo/index.html",
     "main.c0ee4d25.css.map": "/massimo/static/css/main.c0ee4d25.css.map",
-    "main.881c40e3.js.map": "/massimo/static/js/main.881c40e3.js.map"
+    "main.5570b631.js.map": "/massimo/static/js/main.5570b631.js.map"
   },
   "entrypoints": [
     "static/css/main.c0ee4d25.css",
-    "static/js/main.881c40e3.js"
+    "static/js/main.5570b631.js"
   ]
 }
