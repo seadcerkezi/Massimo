@@ -13,8 +13,9 @@ const MainBanner = () => {
     background: "#fef2f2", // Set background color
     color: "#fff", // Set text color
   };
+
   return (
-    <Carousel autoplay className="main-banner">
+    <Carousel className="main-banner">
       <div>
         <div className="contentStyle">
           <div className="div-text" style={{ width: "50%" }}>
@@ -29,7 +30,7 @@ const MainBanner = () => {
           </div>
           <img
             src="https://www.eatingwell.com/thmb/PhRj8Sp6g5m-Cn9AJL2zeLi1LM4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-vegan-pizza-1x1-002-a224f13696b3483d8099b7ae5b494250.jpg"
-            alt="Image 1"
+            alt="firstImg"
             style={{ width: "50%", marginRight: "10px" }}
           />
         </div>

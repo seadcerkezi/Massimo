@@ -18,6 +18,8 @@
       img {
         max-width: 55%;
         transition: 0.3s all ease;
+        margin-top: 16px;
+        // padding-top: 15px;
         &:hover {
           transform: rotate(50deg);
         }
