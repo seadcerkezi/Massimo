@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <div className="navbar">
         <div className="navbar-links">
-          <NavLink className="nav-link" to={"/"}>
+          <NavLink className="nav-link" to={"/Massimo"}>
             HOMEPAGE
           </NavLink>
           <NavLink className="nav-link" to={"/menu"}>
@@ -35,7 +35,7 @@ const Navbar = () => {
         <h2>
           <NavLink
             style={{ textDecoration: "none", color: "#ef4444" }}
-            to={"/"}
+            to={"/Massimo"}
           >
             MASSIMO
           </NavLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <NavLink
             onClick={() => setMenuCliclked(false)}
             className="nav-link"
-            to={"/"}
+            to={"/Massimo"}
           >
             HOMEPAGE
           </NavLink>
