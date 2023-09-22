@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/massimo/static/css/main.c0ee4d25.css",
-    "main.js": "/massimo/static/js/main.641b81b3.js",
-    "static/media/offerProduct.png": "/massimo/static/media/offerProduct.11eccfcb1a45834ac9d7.png",
-    "static/media/offerBg.png": "/massimo/static/media/offerBg.147c28c6b0d121d6cb08.png",
-    "index.html": "/massimo/index.html",
-    "main.c0ee4d25.css.map": "/massimo/static/css/main.c0ee4d25.css.map",
-    "main.641b81b3.js.map": "/massimo/static/js/main.641b81b3.js.map"
+    "main.css": "/Massimo/static/css/main.c0ee4d25.css",
+    "main.js": "/Massimo/static/js/main.52a65153.js",
+    "static/media/offerProduct.png": "/Massimo/static/media/offerProduct.11eccfcb1a45834ac9d7.png",
+    "static/media/offerBg.png": "/Massimo/static/media/offerBg.147c28c6b0d121d6cb08.png",
+    "index.html": "/Massimo/index.html",
+    "main.c0ee4d25.css.map": "/Massimo/static/css/main.c0ee4d25.css.map",
+    "main.52a65153.js.map": "/Massimo/static/js/main.52a65153.js.map"
   },
   "entrypoints": [
     "static/css/main.c0ee4d25.css",
-    "static/js/main.641b81b3.js"
+    "static/js/main.52a65153.js"
   ]
 }
