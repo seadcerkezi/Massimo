@@ -12,11 +12,9 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const [menuClicked, setMenuCliclked] = useState(false);
   const cartItems = useSelector((state) => state.card.cardItems);
-  console.log({ cartItems });
   const menu = () => {
     setMenuCliclked(!menuClicked);
   };
-  console.log("Test", menu);
 
   return (
     <nav className="nav">

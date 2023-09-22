@@ -4,6 +4,27 @@ import pasta3 from "./assets/images/s3.png";
 import pasta4 from "./assets/images/s4.png";
 import pasta5 from "./assets/images/s5.png";
 import pasta6 from "./assets/images/s6.png";
+import burger1 from "./assets/images/b1.png";
+import burger2 from "./assets/images/b2.png";
+import burger3 from "./assets/images/b3.png";
+import burger4 from "./assets/images/b4.png";
+import burger5 from "./assets/images/b5.png";
+import burger6 from "./assets/images/b6.png";
+import pizza1 from "./assets/images/p1.png";
+import pizza2 from "./assets/images/p8.png";
+import pizza3 from "./assets/images/p3.png";
+import pizza4 from "./assets/images/p4.png";
+import pizza5 from "./assets/images/p11.png";
+import pizza6 from "./assets/images/p6.png";
+import pizza7 from "./assets/images/p7.png";
+import pizza8 from "./assets/images/p8.png";
+import pizza9 from "./assets/images/p9.png";
+import pizza10 from "./assets/images/p10.png";
+import pizza11 from "./assets/images/p11.png";
+import pizza12 from "./assets/images/p12.png";
+import pastamenu from "./assets/images/m1.png";
+import burgermenu from "./assets/images/m2.png";
+import pizzamenu from "./assets/images/m3.png";
 
 export const pastas = [
   {
@@ -145,7 +166,7 @@ export const burgers = [
     id: "7",
     title: "Bacon Deluxe",
     desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
-    img: "/assets/images/b1.png",
+    img: burger1,
     price: 29.9,
     category: "burgers",
     options: [
@@ -167,7 +188,7 @@ export const burgers = [
     id: "8",
     title: "Mushroom Swiss Bliss",
     desc: "Elevate your burger experience with a juicy beef patty, crowned with sautéed mushrooms, Swiss cheese, crisp lettuce, and a drizzle of savory truffle aioli.",
-    img: "/assets/images/b2.png",
+    img: burger2,
     price: 31.5,
     category: "burgers",
     options: [
@@ -189,7 +210,7 @@ export const burgers = [
     id: "9",
     title: "Classic Cheeseburger",
     desc: "Taste the nostalgia with our Classic Cheeseburger. A perfectly grilled beef patty, American cheese, lettuce, tomato, pickles, and our special house sauce on a toasted bun.",
-    img: "/assets/images/b3.png",
+    img: burger3,
     price: 26.9,
     category: "burgers",
     options: [
@@ -211,7 +232,7 @@ export const burgers = [
     id: "10",
     title: "Veggie Delight Burger",
     desc: "Satisfy your vegetarian cravings with our Veggie Delight Burger. A flavorful veggie patty made with a blend of vegetables and spices, topped with lettuce, tomato, avocado, and a creamy tahini sauce.",
-    img: "/assets/images/b4.png",
+    img: burger4,
     price: 27.5,
     category: "burgers",
     options: [
@@ -233,7 +254,7 @@ export const burgers = [
     id: "11",
     title: "Spicy Jalapeño Kick",
     desc: "Add some heat to your day with our Spicy Jalapeño Kick burger. A zesty beef patty, pepper jack cheese, jalapeño slices, lettuce, and chipotle mayo for a fiery flavor explosion.",
-    img: "/assets/images/b5.png",
+    img: burger5,
     price: 30.9,
     category: "burgers",
     options: [
@@ -255,7 +276,7 @@ export const burgers = [
     id: "12",
     title: "BBQ Ranch Chicken",
     desc: "Savor the taste of the Wild West with our BBQ Ranch Chicken burger. Grilled chicken breast, crispy bacon, cheddar cheese, lettuce, tomato, and a drizzle of tangy BBQ ranch dressing.",
-    img: "/assets/images/b4.png",
+    img: burger6,
     price: 28.9,
     category: "burgers",
     options: [
@@ -280,7 +301,7 @@ export const pizzas = [
     id: "13",
     title: "Sicilian",
     desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
-    img: "/assets/images/p1.png",
+    img: pizza1,
     price: 24.9,
     category: "pizzas",
     options: [
@@ -302,7 +323,7 @@ export const pizzas = [
     id: "14",
     title: "Mediterranean Delight",
     desc: "Embark on a culinary journey with this Mediterranean-inspired creation, featuring zesty feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano.",
-    img: "/assets/images/p8.png",
+    img: pizza2,
     price: 32.9,
     category: "pizzas",
     options: [
@@ -324,7 +345,7 @@ export const pizzas = [
     id: "15",
     title: "Bella Napoli",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
-    img: "/assets/images/p3.png",
+    img: pizza3,
     price: 26.9,
     category: "pizzas",
     options: [
@@ -346,7 +367,7 @@ export const pizzas = [
     id: "16",
     title: "Pesto Primavera",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
-    img: "/assets/images/p10.png",
+    img: pizza4,
     price: 28.9,
     category: "pizzas",
     options: [
@@ -368,7 +389,7 @@ export const pizzas = [
     id: "17",
     title: "Veggie Supreme",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
-    img: "/assets/images/p11.png",
+    img: pizza5,
     price: 24.9,
     category: "pizzas",
     options: [
@@ -390,7 +411,7 @@ export const pizzas = [
     id: "18",
     title: "Four Cheese Fantasy",
     desc: "Experience pure cheesy bliss with a melty blend of mozzarella, cheddar, provolone, and Parmesan cheeses, creating a rich and indulgent pizza experience.",
-    img: "/assets/images/p12.png",
+    img: pizza6,
     price: 22.9,
     category: "pizzas",
     options: [
@@ -412,7 +433,7 @@ export const pizzas = [
     id: "19",
     title: "Pepperoni Feast",
     desc: "A meat lover's dream, this pizza is loaded with spicy pepperoni, savory sausage, seasoned ground beef, and generous amounts of mozzarella cheese on a thick, doughy crust.",
-    img: "/assets/images/p13.png",
+    img: pizza7,
     price: 21.9,
     category: "pizzas",
     options: [
@@ -434,7 +455,7 @@ export const pizzas = [
     id: "20",
     title: "Margarita",
     desc: "A simple yet exquisite pizza with a thin crust, crushed tomatoes, fresh mozzarella, basil leaves, and a drizzle of olive oil, making it a favorite among pizza purists.",
-    img: "/assets/images/p14.png",
+    img: pizza8,
     price: 20.9,
     category: "pizzas",
     options: [
@@ -456,7 +477,7 @@ export const pizzas = [
     id: "21",
     title: "Hawaiian Delight",
     desc: "A tropical twist on pizza, featuring a tomato sauce base, chunks of ham, pineapple slices, and mozzarella cheese, creating a sweet and savory combination.",
-    img: "/assets/images/p15.png",
+    img: pizza9,
     price: 25.9,
     category: "pizzas",
     options: [
@@ -478,7 +499,7 @@ export const pizzas = [
     id: "22",
     title: "BBQ Chicken",
     desc: "Savor the smoky flavors of BBQ chicken, caramelized onions, fresh cilantro, and mozzarella cheese on a tangy BBQ sauce base, delivering a delightful combination of sweet and savory.",
-    img: "/assets/images/p16.png",
+    img: pizza10,
     price: 27.9,
     category: "pizzas",
     options: [
@@ -500,7 +521,7 @@ export const pizzas = [
     id: "23",
     title: "Supreme Combo",
     desc: "Experience the ultimate pizza with a combination of pepperoni, sausage, bell peppers, onions, black olives, and mushrooms, all layered on a crispy crust with melty mozzarella cheese.",
-    img: "/assets/images/p17.png",
+    img: pizza11,
     price: 30.9,
     category: "pizzas",
     options: [
@@ -522,7 +543,7 @@ export const pizzas = [
     id: "24",
     title: "Spicy Veggie",
     desc: "Heat up your taste buds with a medley of spicy jalapeños, bell peppers, red onions, and diced tomatoes on a zesty tomato sauce base, topped with mozzarella cheese for a fiery kick.",
-    img: "/assets/images/p18.png",
+    img: pizza12,
     price: 26.9,
     category: "pizzas",
     options: [
@@ -548,7 +569,7 @@ export const menu = [
     slug: "pastas",
     title: "Italian Pastas",
     desc: "Savor the taste of perfection with our exquisite Italian handmade pasta menu.",
-    img: "/assets/images/m1.png",
+    img: pastamenu,
     color: "white",
   },
   {
@@ -556,7 +577,7 @@ export const menu = [
     slug: "burgers",
     title: "Juicy Burgers",
     desc: "Burger Bliss: Juicy patties, bold flavors, and gourmet toppings galore.",
-    img: "/assets/images/m2.png",
+    img: burgermenu,
     color: "black",
   },
   {
@@ -564,7 +585,7 @@ export const menu = [
     slug: "pizzas",
     title: "Cheesy Pizzas",
     desc: "Pizza Paradise: Irresistible slices, mouthwatering toppings, and cheesy perfection.",
-    img: "/assets/images/m3.png",
+    img: pizzamenu,
     color: "white",
   },
 ];

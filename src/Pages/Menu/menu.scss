@@ -7,9 +7,7 @@
   .menu-links {
     display: flex;
     flex-direction: row;
-    // max-height: 45vh;
     min-height: 45vh;
-    // width: 8;
     flex: 1;
     text-decoration: none;
     background-position: 50% 50%;
@@ -53,7 +51,6 @@
       flex-direction: row;
       height: auto;
       width: 70vw;
-      // flex: 1;
       background-position: 55% 55%;
       div {
         width: 50%;
@@ -92,7 +89,6 @@
       flex-direction: row;
       height: 50vh;
       width: 80vw;
-      // flex: 1;
       background-position: 55% 55%;
       div {
         width: 50%;

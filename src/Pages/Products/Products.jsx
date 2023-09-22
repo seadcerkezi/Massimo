@@ -5,7 +5,6 @@ import "./products.scss";
 import { NavLink, useParams } from "react-router-dom";
 import { HeartFilled, HeartOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { generateRandomId } from "../../utils/generateRandomId";
 import { addToFav, removeFromFav } from "../../redux/card/cardActions";
 import { message } from "antd";
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./fav.scss";
 import { DeleteOutlined } from "@ant-design/icons";
-import { Link, NavLink, useNavigate } from "react-router-dom/dist";
+import { useNavigate } from "react-router-dom/dist";
 import { removeFromFav } from "../../redux/card/cardActions";
 import { message } from "antd";
 
@@ -10,7 +10,7 @@ const Favs = () => {
   const favItems = useSelector((state) => state.card.favItems);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log("asdasd", favItems.length);
+
   return (
     <div className="fav-container">
       <h2 className="fav-title">Favourites</h2>

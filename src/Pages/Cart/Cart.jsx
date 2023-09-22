@@ -15,11 +15,6 @@ const Cart = () => {
     return total + (item.price + item.options.additionalPrice) * item.qty;
   }, 0);
 
-  console.log(generateNewDate());
-
-  console.log(totalPrice);
-  console.log({ cartItems });
-
   const productPrice = (item) => {
     return ((item.price + item.options.additionalPrice) * item.qty).toFixed(2);
   };

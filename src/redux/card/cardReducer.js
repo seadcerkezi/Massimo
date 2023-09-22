@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const cardReducer = (state = initialState, action) => {
-  console.log({ action: action.payload });
   switch (action.type) {
     case ADD:
       const exist = state.cardItems.find(

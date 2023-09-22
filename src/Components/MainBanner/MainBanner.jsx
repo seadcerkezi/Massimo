@@ -4,16 +4,6 @@ import "./mainBanner.scss";
 import { NavLink } from "react-router-dom";
 
 const MainBanner = () => {
-  const contentStyle = {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center", // Center items vertically
-    justifyContent: "center", // Center items horizontally
-    height: "550px", // Set the height as needed
-    background: "#fef2f2", // Set background color
-    color: "#fff", // Set text color
-  };
-
   return (
     <Carousel className="main-banner">
       <div>
