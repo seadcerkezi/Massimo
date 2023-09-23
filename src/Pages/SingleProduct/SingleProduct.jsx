@@ -40,51 +40,45 @@ const SinglePage = () => {
   console.log({ quantity });
 
   return (
-    <>
-      <div className="main-product">
-        <img src={product.img} alt="" />
-        <div className="product-text">
-          <h4>{product.title}</h4>
-          <p>{product.desc}</p>
-          <h6>${product.price}</h6>
+    <div className="main-product">
+      <img src={product.img} alt="" />
+      <div className="product-text">
+        <h4>{product.title}</h4>
+        <p>{product.desc}</p>
+        <h6>${product.price}</h6>
 
-          <div>
-            <Segmented
-              block
-              className="options"
-              options={["Small", "Medium", "Large"]}
-              value={value}
-              onChange={setValue}
-            />
-            <div className="main-quantity">
-              <div className="quantity">
-                <span>Quantity</span>
-                <div className="left-right">
-                  <button
-                    className="increase-button"
-                    onClick={decreaseQuantity}
-                    disabled={quantity === 1}
-                  >
-                    <LeftOutlined style={{ color: "#cd2f2f" }} />
-                  </button>
-                  <span>{quantity}</span>
-                  <button
-                    className="increase-button"
-                    onClick={increaseQuantity}
-                  >
-                    <RightOutlined style={{ color: "#cd2f2f" }} />
-                  </button>
-                </div>
+        <div className="option-qty">
+          <Segmented
+            block
+            className="options"
+            options={["Small", "Medium", "Large"]}
+            value={value}
+            onChange={setValue}
+          />
+          <div className="main-quantity">
+            <div className="quantity">
+              <span>Quantity</span>
+              <div className="left-right">
+                <button
+                  className="increase-button"
+                  onClick={decreaseQuantity}
+                  disabled={quantity === 1}
+                >
+                  <LeftOutlined style={{ color: "#cd2f2f" }} />
+                </button>
+                <span>{quantity}</span>
+                <button className="increase-button" onClick={increaseQuantity}>
+                  <RightOutlined style={{ color: "#cd2f2f" }} />
+                </button>
               </div>
-              <button className="button" onClick={() => addToCart()}>
-                Add to Cart
-              </button>
             </div>
+            <button className="button" onClick={() => addToCart()}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 

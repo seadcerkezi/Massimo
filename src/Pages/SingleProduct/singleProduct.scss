@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 3%;
-  padding: 8% 5% 8% 15%;
+  padding: 12% 5% 8% 15%;
 
   // width: 30%;
   img {
@@ -30,42 +30,176 @@
       margin: 0;
     }
     .options {
-        width: 50%;
-
+      width: 50%;
     }
     .ant-segmented-item {
       color: #cd2f2f;
     }
     .main-quantity {
-        display: flex;
-        align-items: center;
-        margin-top: 15px;
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
       .quantity {
         display: flex;
         width: 60%;
         justify-content: space-between;
         border: 1px solid #cd2f2f;
-        padding: 7px;  
-        .left-right{
-            display: flex;
-            align-items: baseline;
-            gap: 5px;
-            .increase-button{
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-            }
+        padding: 7px;
+        .left-right {
+          display: flex;
+          align-items: baseline;
+          gap: 5px;
+          .increase-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+          }
         }
+      }
     }
+    .button {
+      background-color: #cd2f2f;
+      color: white;
+      border: none;
+      padding: 10.5px 15px;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
 }
-.button {
-    background-color: #cd2f2f;
-    color: white;
-    border: none;
-    padding: 10.5px 15px;
-    font-size: 14px;
-    text-transform: uppercase;
-    cursor: pointer;
+
+@media (max-width: 1000px) {
+  .main-product {
+    gap: 3%;
+    padding: 12% 5% 8% 15%;
+
+    img {
+      max-width: 27%;
+    }
+    .product-text {
+      h4 {
+        font-size: 26px;
+      }
+      h6 {
+        font-size: 22px;
+      }
+      .options {
+        width: 50%;
+      }
+      .main-quantity {
+        width: 80%;
+      }
+    }
+  }
 }
+
+@media (max-width: 790px) {
+  .main-product {
+    flex-direction: column;
+    gap: 5%;
+    padding: 10% 5% 8% 5%;
+    img {
+      max-width: 40%;
+    }
+    .product-text {
+      align-items: center;
+      h4 {
+        font-size: 26px;
+      }
+      h6 {
+        font-size: 22px;
+      }
+      .option-qty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 55vw;
+        .options {
+          width: 60vw;
+        }
+        .main-quantity {
+          width: 100%;
+          margin-top: 15px;
+          .quantity {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .button {
+          background-color: #cd2f2f;
+          color: white;
+          border: none;
+          padding: 10.5px 15px;
+          font-size: 15px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .main-product {
+    flex-direction: column;
+    gap: 5%;
+    padding: 6% 3% 8% 3%;
+    img {
+      max-width: 40%;
+    }
+    .product-text {
+      .option-qty {
+        width: 55vw;
+        .options {
+          width: 60vw;
+        }
+        .main-quantity {
+          width: 70vw;
+          padding-left: 25px;
+          margin-top: 15px;
+          .quantity {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .button {
+          background-color: #cd2f2f;
+          color: white;
+          border: none;
+
+          padding: 10px 15px;
+          font-size: 15px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .main-product {
+    gap: 5%;
+    padding: 6% 1% 0 1%;
+    img {
+      padding-bottom: 15px;
+    }
+    .product-text {
+      h6 {
+        padding-top: 10px;
+      }
+      .option-qty {
+        padding-top: 10px;
+        gap: 10px;
+        .options {
+          width: 65vw;
+        }
+        .main-quantity {
+          width: 90vw;
+          padding-left: 0;
+        }
+      }
+    }
   }
 }
