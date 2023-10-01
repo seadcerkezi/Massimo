@@ -1,0 +1,32 @@
+.login {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  align-items: center;
+  // justify-content: center;
+
+  margin: 10% 20%;
+
+  width: 45vw;
+
+  img {
+    max-width: 30vw;
+    max-height: 60vh;
+    // flex: 1;
+  }
+
+  .login-div {
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    padding: 10%;
+
+    .input-div {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

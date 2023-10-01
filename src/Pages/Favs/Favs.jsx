@@ -3,11 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import "./fav.scss";
 import { DeleteOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom/dist";
-import { removeFromFav } from "../../redux/card/cardActions";
+import { removeFromFav } from "../../redux/user/userActions";
 import { message } from "antd";
 
 const Favs = () => {
-  const favItems = useSelector((state) => state.card.favItems);
+  const allUsers = useSelector((state) => state.user.allUsers);
+  const logedUserId = useSelector((state) => state.user.logedUserId);
+  const favItems = logedUserId
+    ? allUsers.find((user) => user.id === logedUserId).favourite
+    : [];
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -29,7 +33,7 @@ const Favs = () => {
           <button className="grid-item">
             <DeleteOutlined
               onClick={() => {
-                dispatch(removeFromFav(item.id));
+                dispatch(removeFromFav(item.id, logedUserId));
                 message.error("Removed from Favorite");
               }}
               style={{ fontSize: "20px", cursor: "pointer" }}

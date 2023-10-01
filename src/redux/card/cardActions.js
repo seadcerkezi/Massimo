@@ -1,33 +1,8 @@
-import { ADD, ADDFAV, ADDORDER, DELETE, REMOVEFAV } from "./cardTypes";
+import { CHANGEPRODUCT } from "./cardTypes";
 
-export const add = (item) => {
+export const changeProductData = (item) => {
   return {
-    type: ADD,
-    payload: item,
-  };
-};
-
-export const deleteItem = (item) => {
-  return {
-    type: DELETE,
-    payload: item,
-  };
-};
-export const addToFav = (item) => {
-  return {
-    type: ADDFAV,
-    payload: item,
-  };
-};
-export const removeFromFav = (id) => {
-  return {
-    type: REMOVEFAV,
-    payload: id,
-  };
-};
-export const addToOrders = (item) => {
-  return {
-    type: ADDORDER,
+    type: CHANGEPRODUCT,
     payload: item,
   };
 };

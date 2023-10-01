@@ -1,10 +1,12 @@
 import React from "react";
-import { burgers, pastas, pizzas } from "../../data";
 import "./horizontalScroll.scss";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const HorizontalScroll = () => {
-  const displayedProducts = [pizzas[0], pastas[0], burgers[0]];
+  const products = useSelector((state) => state.card.products);
+
+  const displayedProducts = [products[21], products[3], products[7]];
 
   return (
     <div className="horizontal-scroll">

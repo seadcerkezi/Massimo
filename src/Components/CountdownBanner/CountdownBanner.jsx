@@ -21,8 +21,8 @@ const CountdownBanner = () => {
       <div className="countdown-text">
         <h4>Delicious Burger & French Fry</h4>
         <p>
-          Progressively simplify effective e-toilers and process0centric methods
-          of empowerment. quickly pontificate parallel.
+          Imagine sinking your teeth into a perfectly crafted burger, each bite
+          bursting with savory flavors that dance on your taste buds.
         </p>
         <div className="count">
           <Countdown

@@ -2,21 +2,46 @@ import React from "react";
 import "./cart.scss";
 import Footer from "../../Components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
-import { addToOrders, deleteItem } from "../../redux/card/cardActions";
+import { addToOrders, deleteItem } from "../../redux/user/userActions";
 import { message } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import { generateRandomId } from "../../utils/generateRandomId";
 import { generateNewDate } from "../../utils/generateNewDate";
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.card.cardItems);
+  const allUsers = useSelector((state) => state.user.allUsers);
+  const logedUserId = useSelector((state) => state.user.logedUserId);
+  const cartItems = logedUserId
+    ? allUsers.find((user) => user.id === logedUserId).card
+    : [];
   const dispatch = useDispatch();
-  const totalPrice = cartItems.reduce((total, item) => {
-    return total + (item.price + item.options.additionalPrice) * item.qty;
+  const totalPrice = cartItems?.reduce((total, item) => {
+    if (item.discount > 0) {
+      return (
+        total +
+        (item.price -
+          (item.price * item.discount) / 100 +
+          item.options.additionalPrice) *
+          item.qty
+      );
+    } else {
+      return total + (item.price + item.options.additionalPrice) * item.qty;
+    }
   }, 0);
 
   const productPrice = (item) => {
-    return ((item.price + item.options.additionalPrice) * item.qty).toFixed(2);
+    if (item.discount > 0) {
+      return (
+        (item.price -
+          (item.price * item.discount) / 100 +
+          item.options.additionalPrice) *
+        item.qty
+      ).toFixed(2);
+    } else {
+      return ((item.price + item.options.additionalPrice) * item.qty).toFixed(
+        2
+      );
+    }
   };
 
   const findProducts = () => {
@@ -45,13 +70,15 @@ const Cart = () => {
 
   const handleCheckOut = () => {
     const newOrder = {
+      userId: logedUserId,
       orderId: generateRandomId(),
       date: generateNewDate(),
       price: totalPrice.toFixed(2),
       products: findProducts(),
-      status: "Delivered",
+      status: "On the way",
     };
-    dispatch(addToOrders(newOrder));
+    dispatch(addToOrders(newOrder, logedUserId));
+    message.success("Succsessfully Cheked Out");
   };
 
   return (
@@ -68,15 +95,17 @@ const Cart = () => {
                 <h4 className="item-title">{item.title}</h4>
                 <p>{item.options.title}</p>
               </div>
+
               <h6 className="grid-item">${productPrice(item)}</h6>
               <button
                 className="grid-item"
                 onClick={() => {
                   dispatch(
-                    deleteItem({
-                      id: item.id,
-                      option: item.options.title,
-                    })
+                    deleteItem(
+                      item,
+                      logedUserId
+                      // option: item.options.title,
+                    )
                   );
                   message.error("Deleted from Card");
                 }}

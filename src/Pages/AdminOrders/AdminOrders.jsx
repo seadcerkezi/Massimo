@@ -1,12 +1,15 @@
 import { AgGridReact } from "ag-grid-react";
-import { Table } from "antd";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { CheckOutlined } from "@ant-design/icons";
+import { Button } from "antd";
+import { changeStatus } from "../../redux/user/userActions";
 
-const Orders = () => {
+const AdminOrders = () => {
   const allUsers = useSelector((state) => state.user.allUsers);
-  const logedUserId = useSelector((state) => state.user.logedUserId);
-  const orders = allUsers.find((user) => user.id === logedUserId).orders;
+  const orders = allUsers.map((user) => user.orders).flatMap((item) => item);
+
+  const dispatch = useDispatch();
 
   const StatusCellRenderer = (params) => {
     return (
@@ -18,7 +21,28 @@ const Orders = () => {
     );
   };
 
+  const ActionsCellRenderer = (params) => {
+    return (
+      <div className="settings-buttons">
+        {params.data.status !== "Delivered" ? (
+          <Button
+            type="primary"
+            shape="round"
+            icon={<CheckOutlined />}
+            onClick={() =>
+              dispatch(changeStatus(params.data.orderId, params.data.userId))
+            }
+          />
+        ) : null}
+      </div>
+    );
+  };
+
   const columnDefs = [
+    {
+      headerName: "User ID",
+      field: "userId",
+    },
     {
       headerName: "Order ID",
       field: "orderId",
@@ -39,6 +63,10 @@ const Orders = () => {
       headerName: "Status",
       cellRenderer: StatusCellRenderer,
     },
+    {
+      headerName: "Actions",
+      cellRenderer: ActionsCellRenderer,
+    },
   ];
 
   const defaultColDef = {
@@ -47,7 +75,7 @@ const Orders = () => {
   };
 
   return (
-    <div style={{ width: "100vw" }}>
+    <div style={{ width: "80vw" }}>
       <div
         className="ag-theme-alpine"
         style={{ height: "700px", width: "100%" }}
@@ -64,4 +92,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default AdminOrders;

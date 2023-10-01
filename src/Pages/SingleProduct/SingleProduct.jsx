@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { pizzas, burgers, pastas } from "../../data";
 import "./singleProduct.scss";
 import { Segmented, message } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import Footer from "../../Components/Footer/Footer";
-import { useDispatch } from "react-redux";
-import { add } from "../../redux/card/cardActions";
+import { useDispatch, useSelector } from "react-redux";
+import { add } from "../../redux/user/userActions";
 
 const SinglePage = () => {
-  const [value, setValue] = useState("Medium");
+  const { id } = useParams();
+
+  const products = useSelector((state) => state.card.products);
+  const allUsers = useSelector((state) => state.user.allUsers);
+  const logedUserId = useSelector((state) => state.user.logedUserId);
+
+  const [value, setValue] = useState("Small");
   const [quantity, setQuantity] = useState(1);
 
+  const product = products.find((item) => item.id === id);
+
   const dispatch = useDispatch();
-  const { category, id } = useParams();
-  const newCategory =
-    category === "pizzas" ? pizzas : category === "burgers" ? burgers : pastas;
-  const product = newCategory.find((item) => item.id === id);
 
   const decreaseQuantity = () => {
     setQuantity((prev) => prev - 1);
@@ -26,18 +28,16 @@ const SinglePage = () => {
   };
 
   const addToCart = () => {
+    if (!logedUserId) return message.error("Log in to add to cart");
     const updatedProduct = {
       ...product,
       qty: quantity,
       options: product.options.find((option) => option.title === value),
     };
 
-    dispatch(add(updatedProduct));
+    dispatch(add(updatedProduct, logedUserId));
     message.success("Added to Cart");
   };
-
-  console.log({ value });
-  console.log({ quantity });
 
   return (
     <div className="main-product">
@@ -45,7 +45,25 @@ const SinglePage = () => {
       <div className="product-text">
         <h4>{product.title}</h4>
         <p>{product.desc}</p>
-        <h6>${product.price}</h6>
+        {product.discount > 0 ? (
+          <h6>
+            <span
+              style={{
+                color: "gray",
+                textDecoration: "line-through",
+                paddingRight: "5px",
+              }}
+            >
+              ${product.price}
+            </span>
+            $
+            {(product.price - (product.price * product.discount) / 100).toFixed(
+              2
+            )}
+          </h6>
+        ) : (
+          <h6>${product.price}</h6>
+        )}
 
         <div className="option-qty">
           <Segmented

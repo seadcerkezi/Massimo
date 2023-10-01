@@ -1,0 +1,41 @@
+.settings-buttons {
+  display: flex;
+  gap: 10px;
+  padding-top: 5%;
+  .edit-button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .delete-button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.settings-modal {
+  .settings-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .settings-input {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
+
+.ag-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 2% 22%;
+}
