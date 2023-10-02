@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Massimo/static/css/main.0eebd346.css",
-    "main.js": "/Massimo/static/js/main.388d2d77.js",
+    "main.css": "/Massimo/static/css/main.0fec1e45.css",
+    "main.js": "/Massimo/static/js/main.a2826afa.js",
     "static/media/p10.png": "/Massimo/static/media/p10.f799da3cf03a2b65bfe6.png",
     "static/media/offerProduct.png": "/Massimo/static/media/offerProduct.11eccfcb1a45834ac9d7.png",
     "static/media/p6.png": "/Massimo/static/media/p6.c2134ee9e1ecbba3a06b.png",
@@ -35,11 +35,11 @@
     "static/media/s5.png": "/Massimo/static/media/s5.1e2e2231ee70337f628d.png",
     "static/media/m1.png": "/Massimo/static/media/m1.f8f15df3aacf770b6ab1.png",
     "index.html": "/Massimo/index.html",
-    "main.0eebd346.css.map": "/Massimo/static/css/main.0eebd346.css.map",
-    "main.388d2d77.js.map": "/Massimo/static/js/main.388d2d77.js.map"
+    "main.0fec1e45.css.map": "/Massimo/static/css/main.0fec1e45.css.map",
+    "main.a2826afa.js.map": "/Massimo/static/js/main.a2826afa.js.map"
   },
   "entrypoints": [
-    "static/css/main.0eebd346.css",
-    "static/js/main.388d2d77.js"
+    "static/css/main.0fec1e45.css",
+    "static/js/main.a2826afa.js"
   ]
 }
