@@ -29,10 +29,10 @@ const Users = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: "80vw" }}>
       <div
         className="ag-theme-alpine"
-        style={{ height: "700px", width: "900px" }}
+        style={{ height: "70vh", width: "100%" }}
       >
         <AgGridReact
           columnDefs={columnDefs}

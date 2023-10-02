@@ -56,7 +56,7 @@ const userReducer = (state = initialState, action) => {
     case LOGOUT:
       return {
         ...state,
-        logedUserId: {},
+        logedUserId: null,
       };
 
     case ADD:
@@ -148,7 +148,7 @@ const userReducer = (state = initialState, action) => {
             : {
                 ...user,
                 favourite: user.favourite.filter(
-                  (product) => product.id !== action.payload.itemId
+                  (product) => product.id !== action.payload.productId
                 ),
               }
         ),

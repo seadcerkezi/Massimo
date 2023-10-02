@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./sidebar.scss";
-import { UserOutlined, ShopOutlined } from "@ant-design/icons";
+import { UserOutlined, ShopOutlined, SendOutlined } from "@ant-design/icons";
 
 const Sidebar = () => {
   return (
@@ -13,13 +13,18 @@ const Sidebar = () => {
       </div>
       <div className="sidebar-links">
         <NavLink className="sidebar-link" to={"/settings/users"}>
-          <UserOutlined className="sidebar-icon" /> Users
+          <UserOutlined className="sidebar-icon" />
+          <span className="span">Users</span>
         </NavLink>
+
         <NavLink className="sidebar-link" to={"/settings/products"}>
-          <ShopOutlined className="sidebar-icon" /> Products
+          <ShopOutlined className="sidebar-icon" />
+          <span className="span">Products</span>
         </NavLink>
+
         <NavLink className="sidebar-link" to={"/settings/adminOrders"}>
-          <ShopOutlined className="sidebar-icon" /> Orders
+          <SendOutlined className="sidebar-icon" />
+          <span className="span">Orders</span>
         </NavLink>
       </div>
     </div>

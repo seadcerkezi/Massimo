@@ -1,0 +1,32 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+
+  .dashboard-sidebar {
+    display: flex;
+    width: 20%;
+  }
+
+  .dashboard-head {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh;
+
+    .dashboard-outlet {
+      background-color: #f9fafb;
+      padding: 40px 48px;
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .dashboard {
+    .dashboard-head {
+      .dashboard-outlet {
+        padding: 40px 10px;
+      }
+    }
+  }
+}

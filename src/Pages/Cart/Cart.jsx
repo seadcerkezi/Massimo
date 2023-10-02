@@ -14,20 +14,42 @@ const Cart = () => {
   const cartItems = logedUserId
     ? allUsers.find((user) => user.id === logedUserId).card
     : [];
+
   const dispatch = useDispatch();
-  const totalPrice = cartItems?.reduce((total, item) => {
+
+  console.log({ cartItems });
+
+  const subtotal = cartItems?.reduce((total, item) => {
     if (item.discount > 0) {
       return (
         total +
-        (item.price -
-          (item.price * item.discount) / 100 +
-          item.options.additionalPrice) *
+        (item.price +
+          item.options.additionalPrice -
+          ((item.price + item.options.additionalPrice) * item.discount) / 100) *
           item.qty
       );
     } else {
       return total + (item.price + item.options.additionalPrice) * item.qty;
     }
   }, 0);
+
+  const totalPrice = cartItems?.reduce((total, item) => {
+    if (item.discount > 0) {
+      return (
+        total +
+        (item.price +
+          item.options.additionalPrice -
+          ((item.price + item.options.additionalPrice) * item.discount) / 100) *
+          item.qty
+      );
+    } else {
+      return total + (item.price + item.options.additionalPrice) * item.qty;
+    }
+  }, 0);
+
+  const formattedSubtotal = subtotal.toFixed(2);
+  const delivery = formattedSubtotal < 50 ? 5 : 0;
+  const formattedTotalPrice = totalPrice + delivery;
 
   const productPrice = (item) => {
     if (item.discount > 0) {
@@ -73,7 +95,7 @@ const Cart = () => {
       userId: logedUserId,
       orderId: generateRandomId(),
       date: generateNewDate(),
-      price: totalPrice.toFixed(2),
+      price: formattedTotalPrice.toFixed(2),
       products: findProducts(),
       status: "On the way",
     };
@@ -100,13 +122,7 @@ const Cart = () => {
               <button
                 className="grid-item"
                 onClick={() => {
-                  dispatch(
-                    deleteItem(
-                      item,
-                      logedUserId
-                      // option: item.options.title,
-                    )
-                  );
+                  dispatch(deleteItem(item, logedUserId));
                   message.error("Deleted from Card");
                 }}
               >
@@ -121,7 +137,7 @@ const Cart = () => {
           <div className="infos">
             <div className="infos-row">
               <span>Subtotal ({cartItems.length} items)</span>
-              <span>${totalPrice.toFixed(2)}</span>
+              <span>${formattedSubtotal}</span>
             </div>
             <div className="infos-row">
               <span>Service Cost ({cartItems.length} items)</span>
@@ -129,13 +145,17 @@ const Cart = () => {
             </div>
             <div className="infos-row">
               <span>Delivery Cost</span>
-              <span className="green-color">FREE!</span>
+              {delivery === 0 ? (
+                <span className="green-color">FREE!</span>
+              ) : (
+                <span>$ {delivery.toFixed(2)}</span>
+              )}
             </div>
           </div>
           <div className="total">
             <div className="total-price">
               <span>TOTAL(INCL. VAT)</span>
-              <span>${totalPrice.toFixed(2)}</span>
+              <span>${formattedTotalPrice.toFixed(2)}</span>
             </div>
             <button
               disabled={cartItems.length === 0}

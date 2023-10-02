@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logIn } from "../../redux/user/userActions";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Button, Input, message } from "antd";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const allUsers = useSelector((state) => state.user.allUsers);
@@ -60,6 +60,7 @@ const Login = () => {
         <Button onClick={handleLogin} type="primary">
           Log In
         </Button>
+        <NavLink to={"/"}>Back To Home</NavLink>
       </div>
     </div>
   );

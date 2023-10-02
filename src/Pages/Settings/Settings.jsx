@@ -6,7 +6,6 @@ const Settings = () => {
   const allUsers = useSelector((state) => state.user.allUsers);
   const logedUserId = useSelector((state) => state.user.logedUserId);
   const user = allUsers.find((user) => user.id === logedUserId);
-  console.log({ user });
   return (
     <div className="user-info">
       <h2>User Information</h2>

@@ -52,6 +52,50 @@
   }
 }
 
+@media (max-width: 900px) {
+  .nav {
+    .navbar {
+      justify-content: space-around;
+
+      .nav-pages {
+        .navbar-links {
+          gap: 10px;
+          .phone-icon {
+            border-radius: 5px;
+            padding: 0 2px;
+            font-size: 13px;
+          }
+          .nav-link {
+            font-size: 14px;
+
+            &:hover {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .nav-user {
+      .navbar-links {
+        gap: 10px;
+
+        .nav-link {
+          font-size: 14px;
+          .log-out {
+            size: 12px;
+          }
+          &:hover {
+            font-weight: 500;
+          }
+        }
+      }
+      .hamburger-menu {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .nav {
     .navbar {

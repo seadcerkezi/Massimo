@@ -2,29 +2,17 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import DashboardHeader from "../DashboardHeader/DashboardHeader";
+import "./dashboard.scss";
 
 const Dashboard = () => {
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
-      <div style={{ display: "flex", width: "20%" }}>
+    <div className="dashboard">
+      <div className="dashboard-sidebar">
         <Sidebar />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          flexGrow: "1",
-          minHeight: "100vh",
-        }}
-      >
+      <div className="dashboard-head">
         <DashboardHeader />
-        <div
-          style={{
-            backgroundColor: "#f9fafb",
-            padding: "40px 48px",
-            flexGrow: "1",
-          }}
-        >
+        <div className="dashboard-outlet">
           <Outlet />
         </div>
       </div>

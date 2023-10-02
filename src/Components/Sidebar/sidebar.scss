@@ -36,11 +36,24 @@
         }
       }
     }
+
     .active {
       background-color: #f3f4f6;
       .sidebar-icon {
         color: #cd2f2f;
       }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .sidebar {
+    padding-top: 20vh;
+    .logo {
+      display: none;
+    }
+    .span {
+      display: none;
     }
   }
 }

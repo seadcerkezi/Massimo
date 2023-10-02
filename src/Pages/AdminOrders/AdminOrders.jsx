@@ -78,14 +78,14 @@ const AdminOrders = () => {
     <div style={{ width: "80vw" }}>
       <div
         className="ag-theme-alpine"
-        style={{ height: "700px", width: "100%" }}
+        style={{ height: "75vh", width: "100%" }}
       >
         <AgGridReact
           columnDefs={columnDefs}
           rowData={orders}
           defaultColDef={defaultColDef}
           pagination={true}
-          paginationPageSize={14}
+          paginationPageSize={9}
         />
       </div>
     </div>

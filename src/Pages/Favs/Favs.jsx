@@ -9,6 +9,7 @@ import { message } from "antd";
 const Favs = () => {
   const allUsers = useSelector((state) => state.user.allUsers);
   const logedUserId = useSelector((state) => state.user.logedUserId);
+
   const favItems = logedUserId
     ? allUsers.find((user) => user.id === logedUserId).favourite
     : [];

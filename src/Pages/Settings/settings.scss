@@ -3,24 +3,18 @@
   flex-direction: column;
   align-items: center;
   padding-top: 10%;
-  //   color: #cd2f2f;
-  //   .h2 {
-  //   }
 
   .user-details {
     display: flex;
     gap: 10px;
     padding-bottom: 10px;
 
-    // label {
-    // }
-
     input {
       padding: 5px 10px;
       background-color: transparent;
-      //   border: 1px solid #cd2f2f;
+
       border-radius: 5px;
-      //   color: #cd2f2f;
+
       font-weight: 600;
     }
   }

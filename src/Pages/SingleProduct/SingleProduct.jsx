@@ -46,23 +46,55 @@ const SinglePage = () => {
         <h4>{product.title}</h4>
         <p>{product.desc}</p>
         {product.discount > 0 ? (
-          <h6>
-            <span
-              style={{
-                color: "gray",
-                textDecoration: "line-through",
-                paddingRight: "5px",
-              }}
-            >
-              ${product.price}
-            </span>
-            $
-            {(product.price - (product.price * product.discount) / 100).toFixed(
-              2
+          <div className="price">
+            <h6>
+              <span
+                style={{
+                  color: "gray",
+                  textDecoration: "line-through",
+                  paddingRight: "5px",
+                }}
+              >
+                $
+                {product.price +
+                  product.options.find((option) => option.title === value)
+                    .additionalPrice}
+              </span>
+              $
+              {(
+                product.price +
+                product.options.find((option) => option.title === value)
+                  .additionalPrice -
+                ((product.price +
+                  product.options.find((option) => option.title === value)
+                    .additionalPrice) *
+                  product.discount) /
+                  100
+              ).toFixed(2)}
+            </h6>
+            {(value === "Medium" || value === "Large") && (
+              <span>
+                + $
+                {
+                  product.options.find((option) => option.title === value)
+                    .additionalPrice
+                }
+              </span>
             )}
-          </h6>
+          </div>
         ) : (
-          <h6>${product.price}</h6>
+          <div className="price">
+            <h6>${product.price}</h6>
+            {(value === "Medium" || value === "Large") && (
+              <span>
+                + $
+                {
+                  product.options.find((option) => option.title === value)
+                    .additionalPrice
+                }
+              </span>
+            )}
+          </div>
         )}
 
         <div className="option-qty">

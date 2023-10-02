@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
-import { Button, Input, Modal, Radio } from "antd";
+import { Button, Input, Modal, Radio, message } from "antd";
 import "./settingsProducts.scss";
 import { changeProductData } from "../../redux/card/cardActions";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
@@ -96,10 +96,10 @@ const SettingsProducts = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: "80vw" }}>
       <div
         className="ag-theme-alpine"
-        style={{ height: "500px", width: "900px" }}
+        style={{ height: "70vh", width: "100%" }}
       >
         <AgGridReact
           columnDefs={columnDefs}
@@ -111,7 +111,12 @@ const SettingsProducts = () => {
       </div>
       <div className="ag-buttons">
         <Radio.Button onClick={() => handleCancel()}>Cancel</Radio.Button>
-        <Radio.Button onClick={() => dispatch(changeProductData(rowData))}>
+        <Radio.Button
+          onClick={() => {
+            dispatch(changeProductData(rowData));
+            message.success("Changes saved successfully");
+          }}
+        >
           Save
         </Radio.Button>
       </div>
@@ -127,7 +132,7 @@ const SettingsProducts = () => {
             <div className="settings-input">
               <label>Category </label>
               <Input
-                onChange={(e) => handleCHange(e.target.value, "category")}
+                disabled={true}
                 type="text"
                 value={selectedRow.category}
                 style={{ width: "50%" }}

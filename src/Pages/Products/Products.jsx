@@ -17,14 +17,9 @@ const Pizzas = () => {
   const products = useSelector((state) => state.card.products);
   const dispatch = useDispatch();
 
-  // products.filter((product) => product.category === category)
-
   const nnewCategory = products.filter(
     (product) => product.category === category
   );
-
-  // const newCategory =
-  //   category === "pizzas" ? pizzas : category === "burgers" ? burgers : pastas;
 
   const checkFav = (item) => {
     const exist = favourites.find((fav) => fav.id === item.id);
@@ -79,12 +74,6 @@ const Pizzas = () => {
               ) : (
                 <p className="price">${item.price}</p>
               )}
-              {/* <p className="price">
-                $
-                {item.discount > 0
-                  ? (item.price * item.discount) / 100
-                  : item.price}
-              </p> */}
             </div>
           </div>
         ))}

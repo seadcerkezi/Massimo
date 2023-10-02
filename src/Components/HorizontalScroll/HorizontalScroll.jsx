@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const HorizontalScroll = () => {
   const products = useSelector((state) => state.card.products);
 
-  const displayedProducts = [products[21], products[3], products[7]];
+  const displayedProducts = [products[21], products[3], products[6]];
 
   return (
     <div className="horizontal-scroll">
